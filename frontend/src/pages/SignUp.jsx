@@ -25,7 +25,7 @@ const SignUp = () => {
       return handleFailer("All fields are required");
     setLoading(true);
     try {
-      const url = "http://localhost:4050/auth/signup";
+      const url = "https://jwt-auth-backend-354i8ypg3-lepaksha-swamy-k-ms-projects.vercel.app/auth/signup";
       const response = await axios.post(url, formData);
       console.log(response);
       if (response.data.success) {
