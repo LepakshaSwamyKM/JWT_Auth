@@ -33,7 +33,7 @@ const Login = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        "http://localhost:4050/auth/login",
+        "https://jwt-auth-backend-354i8ypg3-lepaksha-swamy-k-ms-projects.vercel.app/auth/login",
         formData
       );
       console.log(response.data);
