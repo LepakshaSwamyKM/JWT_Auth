@@ -7,8 +7,10 @@ const productRoutes = require("./routes/Product_router");
 dotenv.config();
 
 const app = express();
-app.use(cors());
-app.use(express.json());
+app.use(cors({
+  origin: "https://jwt-auth-ui.vercel.app/", // Replace with your frontend URL
+  credentials: true,
+}));app.use(express.json());
 
 app.get("/", (req, res) => {
   console.log("✅ Root route hit");
